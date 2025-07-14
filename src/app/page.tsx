@@ -35,7 +35,7 @@ export default function Page() {
 
     const userEmail = session.user?.email ?? '';
     const res = await fetch(
-      `/api/agent?idusuario=${encodeURIComponent(userEmail)}&msg=${encodeURIComponent(msg)}`
+      `/api/agent?idagente=${encodeURIComponent(userEmail)}&msg=${encodeURIComponent(msg)}`
     );
     const texto = await res.text();
 
